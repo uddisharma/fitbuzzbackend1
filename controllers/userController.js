@@ -29,14 +29,14 @@ const SendEmail = (req, res, link, email) => {
   let maingenerator = new Mailgen({
     theme: "default",
     product: {
-      name: "Fitbuzz Care",
+      name: "Fitbuzz Shop",
       link: "https://mailgen.js/",
     },
   });
   // let response = {
   //   body: {
   //     name: email,
-  //     intro: "you have received an email from Fitbuzz Care ",
+  //     intro: "you have received an email from Fitbuzz Shop ",
   //     table: {
   //       data: [
   //         {
@@ -240,7 +240,7 @@ const SendEmail = (req, res, link, email) => {
                                 >
                                   You request to reset the password for your account
                                   has been made at
-                                  <a href="https://fitbuzzcare.com/"></a>
+                                  <a href="https://fitbuzzshop.com/"></a>
                                 </h4>
                                 <br />
                                 <h4
@@ -791,14 +791,14 @@ const sendOTP = (req, res, user) => {
   let maingenerator = new Mailgen({
     theme: "default",
     product: {
-      name: "Fitbuzz Care",
+      name: "Fitbuzz Shop",
       link: "https://mailgen.js/",
     },
   });
   let response = {
     body: {
       name: user,
-      intro: "you have received an email from Fitbuzz Care",
+      intro: "you have received an email from Fitbuzz Shop",
       table: {
         data: [
           {
@@ -948,14 +948,14 @@ class UserController {
     let maingenerator = new Mailgen({
       theme: "default",
       product: {
-        name: "Fitbuzz Care",
+        name: "Fitbuzz Shop",
         link: "https://mailgen.js/",
       },
     });
     let response = {
       body: {
         name: username,
-        intro: "you have received an email from Fitbuzz Care ",
+        intro: "you have received an email from Fitbuzz Shop ",
         table: {
           data: [
             {
@@ -1064,7 +1064,7 @@ class UserController {
         const token = jwt.sign({ userID: user._id }, secret, {
           expiresIn: "15m",
         });
-        const link = `http://127.0.0.1:3000/user/reset/${user._id}/${token}`;
+        const link = `https://www.fitbuzzshop.com/user/reset/${user._id}/${token}`;
         // console.log(link);
         SendEmail(req, res, link, email);
         // res.send({
