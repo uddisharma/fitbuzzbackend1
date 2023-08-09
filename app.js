@@ -54,7 +54,7 @@ var upload = multer({ storage: storage });
 // });
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://fitbuzzahop.com",
   credentials: true,
   optionSuccessStatus: 200,
   // origin: process.env.REMOTE_CLIENT_APP
